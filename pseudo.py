@@ -18,10 +18,12 @@ dll_excludes = [
                 "mpr.dll"
                 ]
 
-excludes=['crypto', 'openssl', '_ssl', 'pyreadline', 'difflib', 'doctest', 'locale', 'optparse', 'pickle', 'calendar', 'pbd', 'unittest', 'inspect']
+excludes=['crypto', 'openssl', '_ssl', 'pyreadline', 'difflib', 'doctest', 'locale', 'optparse', 'pickle', 'calendar', 'pbd', 'unittest', 'inspect', '_tkinter', 'tkinter']
+includes=['imp']
                                  
 sys.argv.append("--dll-excludes=%s" % ",".join(dll_excludes))
 sys.argv.append("--excludes=%s" % ",".join(excludes))
+sys.argv.append("--includes=%s" % ",".join(includes))
 
 setup(
     options = {{'py2exe': {{'optimize': 2, 'bundle_files': {}, 'compressed': {}}}}},

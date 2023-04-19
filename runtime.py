@@ -51,7 +51,7 @@ class Interpreter:
                 for i in tokenized:
                         if i in proh or len (i.strip())<1:
                                 tokenized.remove(i)
-                tokenized.pop()
+                #tokenized.pop()
                 #print(tokenized)
                 return tokenized
 
@@ -96,6 +96,8 @@ def execute_backend(code, debug=False):
         while break_condition:
                 try:
                         line_exec = session.tokenizer(code[line])
+                        if line_exec == []: line += 1; continue			# en alttaki line arttırma satırı kaldırılabilir
+                        if line_exec[0] == '//': line += 1; continue		# ama çıkabilecek hatalarla uğraşmaya üşeniyorum
                         if exec_else:
                                 if line_exec[0].lower() == "değilse":
                                         line_exec = line_exec[1:]
@@ -180,7 +182,7 @@ def execute_backend(code, debug=False):
 
 def execute(code, debug=False):
         to_exec = code.strip().split("\n")
-        try: execute_backend(to_exec, debug=False)
+        try: execute_backend(to_exec, debug=debug)
         except Exception as e:
                 custom_output(e, debug=debug)
         return None
