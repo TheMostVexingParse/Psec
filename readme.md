@@ -32,7 +32,7 @@ Before we start, make sure that you have the following software installed on you
 2. Navigate to the directory where you want to install Psec.
 
 3. Clone the Psec repository by running the following command:
-`git clone https://github.com/kerbal_galactic/psec.git`
+`git clone https://github.com/TheMostVexingParse/psec.git`
 4. Once the repository has been cloned, navigate to the psec directory by running the following command:
 `cd psec`
 5. Install the required dependencies by running the following command:
