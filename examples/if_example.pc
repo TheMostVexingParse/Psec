@@ -1,0 +1,5 @@
+başla
+a = 50
+eğer a > 40 ise yaz "40'tan büyük"
+değilse yaz "40'tan büyük değil"
+bitir

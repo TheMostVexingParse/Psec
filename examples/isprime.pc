@@ -1,0 +1,16 @@
+başla
+oku isprime -> ">>> "
+eğer isprime < 2 ise git A15
+divc = 0
+iter = 1
+lim = int(isprime**(1/2))-1
+eğer iter > lim ise git A12
+iter = iter+1
+eğer isprime % iter == 0 ise divc = divc + 1
+eğer divc >= 1 ise git A12
+git A6
+eğer divc >= 1 ise git A15
+yaz "Asal"
+git A16
+yaz "Asal değil"
+bitir

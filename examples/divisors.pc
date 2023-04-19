@@ -1,0 +1,14 @@
+başla
+oku sayı -> ">>>"
+lim = sayı/2+1
+say = [sayı]
+i = 0
+:döngü
+i = i+1
+eğer sayı%i == 0 ise ekle i -> say
+eğer i > lim ise git yaz
+git döngü
+:yaz
+say = sırala(say)
+yaz say
+bitir
