@@ -1,10 +1,10 @@
 başla
+
 asal = 0
 sayaç = 1
 asallar = []
 
 limit = 20
-
 
 // girintilemeler estetik amaçlı
 
@@ -18,7 +18,6 @@ limit = 20
 	eğer sayaç%c == 0 ise git değil
 	c = c+1
 	git asalkontrol
-
 
 :asal
 	ekle sayaç -> asallar
